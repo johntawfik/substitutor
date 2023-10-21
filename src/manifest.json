@@ -11,12 +11,13 @@
   "icons": {
     "128": "icon-128.png"
   },
+  "permissions": ["http://*/*", "https://*/*"],
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "matches": ["<all_urls>"],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"],
-      "run_at": "document_start"
+      "run_at": "document_end"
     }
   ],
   "devtools_page": "devtools.html",
